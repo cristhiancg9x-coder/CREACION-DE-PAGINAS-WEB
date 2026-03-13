@@ -1,0 +1,68 @@
+---
+const { 
+  title = "Creación de Páginas Web Profesionales - Arequipa, Moquegua, Perú & USA",
+  description = "Servicios de diseño y desarrollo web minimalista y profesional. Impulsa tu negocio con una presencia online de alto impacto en Moquegua, Arequipa, todo el Perú y EE.UU.",
+  keywords = "diseño web moquegua, desarrollo web arequipa, paginas web peru, web design usa, sitios web economicos, programacion web"
+} = Astro.props;
+---
+
+<!-- SEO Meta Tags -->
+<title>{title}</title>
+<meta name="description" content={description} />
+<meta name="keywords" content={keywords} />
+<meta name="viewport" content="width=device-width" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<meta name="generator" content={Astro.generator} />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content={Astro.url} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content="/favicon.svg" />
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content={Astro.url} />
+<meta property="twitter:title" content={title} />
+<meta property="twitter:description" content={description} />
+<meta property="twitter:image" content="/favicon.svg" />
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Web Creation Services",
+    "image": "/favicon.svg",
+    "@id": "",
+    "url": "https://tusitio.com",
+    "telephone": "+51951413458",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Arequipa / Moquegua",
+      "addressLocality": "Arequipa",
+      "addressRegion": "PE",
+      "addressCountry": "PE"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -16.409,
+      "longitude": -71.537
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "opens": "09:00",
+      "closes": "18:00"
+    },
+    "sameAs": []
+  }
+</script>

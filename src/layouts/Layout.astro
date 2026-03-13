@@ -1,0 +1,75 @@
+---
+import SEO from '../components/SEO.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+import '../styles/global.css';
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <SEO title={title} description={description} />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <nav class="container nav-wrapper">
+        <a href="/" class="logo">
+          <img src="/favicon.svg" alt="Web Creation Logo" width="40" height="40" />
+          <span>WebCreation</span>
+        </a>
+        <div class="nav-links">
+          <a href="#servicios">Servicios</a>
+          <a href="#contacto" class="btn">Empezar</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="container">
+      <div class="footer-content">
+        <p>&copy; {new Date().getFullYear()} WebCreation. All rights reserved.</p>
+        <p>Expertos en diseño web en Moquegua, Arequipa y alcance global (Perú & USA).</p>
+      </div>
+    </footer>
+
+    <WhatsAppButton />
+
+    <style>
+      .nav-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+      }
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: var(--primary);
+      }
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+      }
+      .footer-content {
+        padding: 3rem 0;
+        border-top: 1px solid #f1f5f9;
+        text-align: center;
+        font-size: 0.9rem;
+        color: var(--secondary);
+      }
+    </style>
+  </body>
+</html>
