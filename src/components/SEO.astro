@@ -21,14 +21,14 @@ const {
 <meta property="og:url" content={Astro.url} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-<meta property="og:image" content="/favicon.svg" />
+<meta property="og:image" content={new URL('/favicon.svg', Astro.url)} />
 
 <!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content={Astro.url} />
-<meta property="twitter:title" content={title} />
-<meta property="twitter:description" content={description} />
-<meta property="twitter:image" content="/favicon.svg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:url" content={Astro.url} />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={new URL('/favicon.svg', Astro.url)} />
 
 <!-- Structured Data -->
 <script type="application/ld+json">
@@ -36,9 +36,9 @@ const {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Web Creation Services",
-    "image": "/favicon.svg",
+    "image": new URL('/favicon.svg', Astro.url),
     "@id": "",
-    "url": "https://tusitio.com",
+    "url": "https://tu-web-ya.netlify.app",
     "telephone": "+51951413458",
     "address": {
       "@type": "PostalAddress",
